@@ -10,6 +10,42 @@ gradle과 mybatis를 활용하여 linux 환경에서 mariadb, oracle의 database
 
 [소스 링크](https://github.com/auspicious0/connect_mybatis_db)
 
+oracle의 configuration은 조금 상이한 부분이 있다.
+
+일단 ojdbc library를 추가해야 하고
+
+아래와 같이 작성해야 한다.
+
+```
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <typeAliases>
+        <typeAlias type="Gradle.User" alias="User"/>
+    </typeAliases>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="oracle.jdbc.driver.OracleDriver"/>        
+                <property name="url" value="jdbc:oracle:thin:@*.*.*.*:1521:ORCL"/>
+                <property name="username" value="id"/>
+                <property name="password" value="password"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="mapper/UserMapper.xml"/>
+    </mappers>
+</configuration>
+
+
+```
+
+
 ## 2.	build.gradle 소스
 
 build gradle에 필요한 libray 를 추가하고 gradle task – jar로 빌드한다.
