@@ -21,3 +21,23 @@ build gradle에 필요한 libray 를 추가하고 gradle task – jar로 빌드�
 ## 3.	sh 
 
 shell 파일을 만들고 실행한다. shell 파일에 관한 설명은 민감한 정보이기 때문에 공개하지 않는다.
+
+아래는 실행 결과이다.
+
+아래 maria db가 
+
+![image](https://github.com/auspicious0/GradleEx02_MyBatis/assets/108572025/2f0f9ecd-0bb0-4861-842b-ce8460fe0462)
+
+출력되는 것을 볼 수 있다.
+
+![image](https://github.com/auspicious0/GradleEx02_MyBatis/assets/108572025/d4701683-d1dc-4699-9cb3-565c873c5e4d)
+
+또한 oracle의 table 역시
+
+![image](https://github.com/auspicious0/GradleEx02_MyBatis/assets/108572025/be2bd734-89b9-4889-9170-3af050784bf6)
+
+아래와 같이 출력된다.
+
+![image](https://github.com/auspicious0/GradleEx02_MyBatis/assets/108572025/e97a7be2-a73d-4f57-963d-4424d4291a67)
+
+
